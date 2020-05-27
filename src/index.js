@@ -1,26 +1,8 @@
-// Requires
-const express = require('express')
-require('./db/mongoose')
-const User = require('./models/user')
-const Task = require('./models/task')
-const userRouter = require('./routers/user')
-const taskRouter = require('./routers/task')
+// Require
+const app = require('./app')
 
-// Setup Express
-const app = express()
+//Port
 const port = process.env.PORT
-
-// Auto JSON Output
-app.use(express.json())
-
-// Middleware
-
-// Routes
-
-app.use(userRouter)
-app.use(taskRouter)
-
-
 
 // Listen
 app.listen(port, () => {
